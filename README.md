@@ -58,7 +58,7 @@ curl -fsSL https://get.docker.com | bash
 sudo systemctl start docker
 sudo systemctl enable docker
 ```
-## 部署方式一：手动构建镜像 (Docker Run)
+### 部署方式一：手动构建镜像 (Docker Run)
 这种方式适合快速测试，无需额外的配置文件。
 
 克隆项目代码
