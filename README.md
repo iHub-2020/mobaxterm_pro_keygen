@@ -8,7 +8,7 @@ MobaXterm Pro KeyGen 是一个基于 Python Flask 的 Web 工具，用于在网�
 ## 项目信息
 *   **作者**: Reyanmatic
 *   **版本**: 1.0.2
-*   **GitHub**: [https://github.com/iHub-2020/Mobaxterm_pro](https://github.com/iHub-2020/Mobaxterm_pro)
+*   **GitHub**: [https://github.com/iHub-2020/mobaxterm_pro_keygen](https://github.com/iHub-2020/mobaxterm_pro_keygen)
 
 ## 界面预览 | UI Preview
 
