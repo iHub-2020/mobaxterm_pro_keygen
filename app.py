@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """
 Title: MobaXterm Pro KeyGen
-Version: 1.0.0
+Version: 1.0.2
 Author: Reyanmatic
+Date: 2025-12-01
 Description: A web-based tool to generate MobaXterm Professional license keys.
+             Backend logic handles encryption and ZIP file generation.
 """
 
 import os
@@ -76,16 +78,24 @@ def GenerateLicenseInMemory(Type: LicenseType, Count: int, UserName: str, MajorV
 def index():
     return send_file('index.html')
 
-@app.route('/gen')
+# 修改点：添加 methods=['GET', 'POST'] 以支持表单提交
+@app.route('/gen', methods=['GET', 'POST'])
 def generate_and_download_license():
-    name = request.args.get('name')
-    version = request.args.get('ver')
+    # 修改点：根据请求方式选择获取参数的方法
+    if request.method == 'POST':
+        name = request.form.get('name')
+        version = request.form.get('ver')
+        count_str = request.form.get('count', '1')
+    else:
+        name = request.args.get('name')
+        version = request.args.get('ver')
+        count_str = request.args.get('count', '1')
     
     if not name or not version:
-        return make_response("错误：必须提供 'name' 和 'ver' 参数 (例如: /gen?name=MyName&ver=25.2)", 400)
+        return make_response("错误：必须提供 'name' 和 'ver' 参数", 400)
 
     try:
-        count = int(request.args.get('count', '1'))
+        count = int(count_str)
         MajorVersion, MinorVersion = version.split('.')[0:2]
         MajorVersion = int(MajorVersion)
         MinorVersion = int(MinorVersion)
