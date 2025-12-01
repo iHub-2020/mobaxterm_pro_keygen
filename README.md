@@ -43,7 +43,7 @@ sudo systemctl enable docker
 
 ### 创建目录(推荐普通用户，权限1000)
 ```bash
-sudo mkdir p /opt/mobaxterm_pro_keygen/app
+sudo mkdir -p /opt/mobaxterm_pro_keygen/app
 ```
 1. **用 sudo 克隆仓库**
 ```bash
