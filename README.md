@@ -48,7 +48,7 @@ sudo mkdir p /opt/{mobaxterm_pro_keygen,app}
 1. **用 sudo 克隆仓库**
 ```bash
 cd /opt
-sudo git clone https://github.com/iHub-2020/mobaxterm-pro-keygen.git
+sudo git clone https://github.com/iHub-2020/mobaxterm_pro_keygen.git
 ```
 
 2. **将文件夹的所有权修改为你的用户**
@@ -59,12 +59,12 @@ sudo chmod -R 755 /opt/mobaxterm_pro_keygen
 
 3. **确认一下文件都在**
 ```bash
-ls -l /opt/mobaxterm-pro-keygen
+ls -l /opt/mobaxterm_pro_keygen
 ```
 
 4. **构建镜像（注意最后有个点 . 代表当前目录）**
 ```bash
-cd /opt/mobaxterm-pro-keygen/
+cd /opt/mobaxterm_pro_keygen/
 docker build -t mobaxterm-pro-keygen-image:latest .
 ```
 
