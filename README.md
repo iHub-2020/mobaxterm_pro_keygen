@@ -122,13 +122,19 @@ nano docker-compose.yml
 并将以下内容粘贴进去：
 ```bash
 yaml
-version: '3'
+version: '3.8'
+
 services:
-  web:
-    build: .
+  mobaxterm-pro-keygen:
+    container_name: mobaxterm-pro-keygen
+    image: mobaxterm-pro-keygen-image:latest
+    
+    volumes:
+      - /opt/mobaxterm_pro_keygen/app:/app
+      
     ports:
       - "5000:5000"
-    container_name: mobaxterm-gen
+      
     restart: always
 ```
 (按 Ctrl+O 保存，按 Ctrl+X 退出)
