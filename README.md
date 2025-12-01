@@ -41,10 +41,6 @@ sudo systemctl enable docker
 
 # 构建镜像
 
-### 创建目录(推荐普通用户，权限1000)
-```bash
-sudo mkdir -p /opt/mobaxterm_pro_keygen/app
-```
 1. **用 sudo 克隆仓库**
 ```bash
 cd /opt
@@ -53,6 +49,7 @@ sudo git clone https://github.com/iHub-2020/mobaxterm_pro_keygen.git
 
 2. **将文件夹的所有权修改为你的用户**
 ```bash
+sudo mkdir -p /opt/mobaxterm_pro_keygen/app
 sudo chown -R 1000:1000 /opt/mobaxterm_pro_keygen
 sudo chmod -R 755 /opt/mobaxterm_pro_keygen
 ```
