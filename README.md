@@ -12,7 +12,7 @@ MobaXterm Pro KeyGen 是一个基于 Python Flask 的 Web 工具，用于在网�
 
 ## 界面预览 | UI Preview
 
-<p align="center">
+<p align="left">
   <img src="UI.png" alt="MobaXterm KeyGen UI" width="600">
 </p>
 
